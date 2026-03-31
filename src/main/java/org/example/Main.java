@@ -1,17 +1,59 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+public class Main {
+    public static void main(String[] args) {
+        // 1. Đọc cấu hình từ file hibernate.cfg.xml
+        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+        // 2. Mở một phiên làm việc (Session) với Database
+        Session session = factory.openSession();
+        Transaction transaction = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       // try {
+            // Bắt đầu một giao dịch (Transaction) - Bắt buộc khi muốn thay đổi dữ liệu (Insert/Update/Delete)
+         //   transaction = session.beginTransaction();
+            // 3. Tạo một đối tượng Student mới bằng Java thuần (Không hề có SQL)
+        // Student student1 = new Student("Duong", "duong.it@example.com");
+            // 4. Lưu xuống Database thông qua Hibernate
+        // session.persist(student1);
+            // Xác nhận giao dịch thành công để lưu vĩnh viễn
+           // transaction.commit();
+            // System.out.println("🎉 Đã lưu sinh viên thành công xuống DB!");
+        // } catch (Exception e) {
+        //    if (transaction != null) {
+        //        transaction.rollback(); // Hủy bỏ thao tác nếu có lỗi xảy ra
+        //    }
+        //    e.printStackTrace();
+        // } finally {
+            // Đóng kết nối để giải phóng tài nguyên
+           // session.close();
+           // factory.close();
+        // }
     }
 }
