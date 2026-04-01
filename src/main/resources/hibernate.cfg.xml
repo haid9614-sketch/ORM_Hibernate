@@ -18,6 +18,7 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="org.example.Student"/>
+        <mapping class="org.example.RestaurantTable"/>
 
     </session-factory>
 </hibernate-configuration>
